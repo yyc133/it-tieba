@@ -23,15 +23,15 @@
 		}
 
 		//密码需SHA256加密
-		var password = document.getElementById("password").value;
-		if(password != ""){
-			document.getElementById("password").value = CryptoJS.SHA256(password);
-		}
+		// var password = document.getElementById("password").value;
+		// if(password != ""){
+		// 	document.getElementById("password").value = CryptoJS.SHA256(password);
+		// }
 		//密码提示答案需SHA256加密
-		var answer = document.getElementById("answer").value;
-		if(answer != ""){
-			document.getElementById("answer").value = CryptoJS.SHA256(answer);
-		}
+		// var answer = document.getElementById("answer").value;
+		// if(answer != ""){
+		// 	document.getElementById("answer").value = CryptoJS.SHA256(answer);
+		// }
 		
 
 		objForm.submit();
@@ -431,7 +431,7 @@
 
 <div class="skeleton backgroundModule">
 	<div class="main wrap backgroundModule">
-		<form method="post" action="https://www.baidu.com/" class="pure-form">
+		<form  method="post" action="http://bbs.diyhi.com/" class="pure-form">
 			<!-- 令牌标记 -->
 			<input type="hidden" id="token" name="token" value="726e827e76a44b5a93c6be91dc0b50b4">
 		
