@@ -1,0 +1,605 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0021)http://bbs.diyhi.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!--<base href="http://bbs.diyhi.com/">--><base href=".">
+	
+	<title>巡云轻论坛演示站</title>
+	<meta name="keywords" content="巡云轻论坛演示站">
+	<meta name="description" content="巡云轻论坛演示站">
+	<link rel="shortcut icon" type="image/x-icon" href="http://bbs.diyhi.com/common/default/pc/images/favicon.ico" media="screen">
+
+	<link href="./static/巡云轻论坛演示站_files/common.css" rel="stylesheet" type="text/css">
+	<!--[if (IE 6)|(IE 7)|(IE 8)]>
+	<script type="text/javascript" src="common/default/pc/js/css3pie/PIE_IE678.js"></script> 
+	<![endif]-->
+	<!--[if (IE 6)|(IE 7)|(IE 8)]>
+	<script type="text/javascript">
+		//让ie6/ie7/ie8支持自定义标签。这段代码必须放在页面头部<head>标签内
+		(function() {
+			var a = ['hide'/* 其他HTML5元素 */];
+			for (var i = 0, j = a.length; i < j; i++) {
+				document.createElement(a[i]);
+			}	
+		})();
+	</script>
+	<![endif]-->
+	<script type="text/javascript" src="./巡云轻论坛演示站_files/jquery.min.js.下载" language="javascript"></script>
+	<link href="./巡云轻论坛演示站_files/style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="./巡云轻论坛演示站_files/comment.js.下载"></script> 
+	<script type="text/javascript" src="./巡云轻论坛演示站_files/tool.js.下载" language="javascript"></script>
+	<link href="./巡云轻论坛演示站_files/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="./巡云轻论坛演示站_files/kindeditor-min.js.下载" language="javascript"></script>
+	<script type="text/javascript" src="./巡云轻论坛演示站_files/ajax.js.下载" language="javascript"></script>
+	<script type="text/javascript" src="./巡云轻论坛演示站_files/json2.js.下载" language="javascript"></script>
+	<link href="./巡云轻论坛演示站_files/layer.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="./巡云轻论坛演示站_files/layer.js.下载" language="javascript"></script><link rel="stylesheet" href="./巡云轻论坛演示站_files/layer(1).css" id="layuicss-skinlayercss">
+</head>
+<body>
+<div class="headerModule">
+	<div class="box">
+		<a href="http://bbs.diyhi.com/" class="logo">
+			<img alt="LOGO" src="./巡云轻论坛演示站_files/logo.gif">
+		</a>
+<div class="nav">
+	<ul class="clearfix">
+			<li><a href="http://bbs.diyhi.com/index">首页</a></li>
+			<li><a href="http://bbs.diyhi.com/membershipCardList">会员卡</a></li>
+	</ul>
+</div>
+
+		<div class="head-search">
+			<form action="http://bbs.diyhi.com/search" method="get">
+				<input name="keyword" value="" autocomplete="off" placeholder="搜索">
+				<input type="submit" class="sub-button">
+			</form>
+		</div>
+		{% if session.get("user_info") %}
+		<div class="menu">
+			<ul class="clearfix">
+					<li><a href="reg">会员</a></li>
+					<li><a href="login">用户中心</a></li>
+					<li><a href="logout">注销登录</a></li>
+			</ul>
+		</div>
+		{% else %}
+		<div class="menu">
+			<ul class="clearfix">
+					<li><a href="reg">注册</a></li>
+					<li><a href="login">登录</a></li>
+			</ul>
+		</div>
+		{% endif %}
+	</div>
+</div>
+
+
+<div class="skeleton">
+	<div class="main wrap backgroundModule">
+	
+	<!-- <div class="tabModule">
+		<a href="http://bbs.diyhi.com/" class="tab_current">全部</a>
+			<a href="http://bbs.diyhi.com/?tagId=26322939661348" class="tab">综合</a>
+			<a href="http://bbs.diyhi.com/?tagId=26315816450947" class="tab">玩机技巧</a>
+			<a href="http://bbs.diyhi.com/?tagId=26037571205829" class="tab">测评晒单</a>
+			<a href="http://bbs.diyhi.com/?tagId=26315813050946" class="tab">第三方配件</a>
+			<a href="http://bbs.diyhi.com/?tagId=26315802650945" class="tab">公告</a>
+			<a href="http://bbs.diyhi.com/?tagId=25285555508571" class="tab">求助</a>
+			<a href="http://bbs.diyhi.com/?tagId=26315839750948" class="tab">功能建议</a>
+			<a href="http://bbs.diyhi.com/?tagId=30377063186032" class="tab">VIP专区</a>
+			<a href="http://bbs.diyhi.com/?tagId=30377064986033" class="tab">白金会员专区</a>
+	</div>	 -->
+		
+
+
+<div class="topicModule">
+<table cellspacing="0" cellpadding="0">  
+			<tbody>               
+				<tr>
+		    		<th> 
+				        <div class="avatarBox">
+				            <a class="avatarLink" href="http://bbs.diyhi.com/user/control/home?userName=test2">
+									<img src="./static/巡云轻论坛演示站_files/3.jpg">
+				            </a>   
+				        </div>
+				        <div class="content">
+				            <a href="http://bbs.diyhi.com/thread?topicId=31" class="title">
+					          	<span>仙界拍卖会</span>
+							</a>
+							<div class="clear"></div>
+							<div class="info clearfix">
+				
+								<a href="javascript:;" class="clear">
+									<em class="replies">3</em>
+									<img class="images" src="./static/巡云轻论坛演示站_files/comment.png" style="float: right;*margin-top: 26px;" alt="">
+								</a>
+				
+								<a href="http://bbs.diyhi.com/" class="view" style="*margin-top: 20px;">
+									<img class="images" src="./static/巡云轻论坛演示站_files/pageview.png" alt="" style="float: left;">1287
+								</a>
+								<span class="tag">综合</span>
+								<em>  
+				                	<a href="http://bbs.diyhi.com/user/control/home?userName=test2">
+					           			<span style="display:inline-block;margin-left: 7px;">
+					                    	test2
+					                    </span>
+				                    </a>
+										<span class="userRoleName">白金会员</span>
+									
+				                </em>
+				                
+				                
+				                <em>发表时间：2019-04-26 00:36:10</em>
+				                	<em>最新回复：2019-08-01 00:36:08</em>
+				                
+							</div>
+						</div>
+						<div style="margin-left: 82px; position: relative;">
+								<div class="summary">
+									这时拍卖师指着看台上的黑色特斯拉说道：“此飞行法宝长为一丈五尺，宽为五尺一寸，时速最高可达三千六百里，防御力相当于上品法器，它不需要修士的法力，只要用神识操纵即可，真正提供动力的是镶嵌在法宝上蓄电池，只需在打雷天气放在云下即可充电。底价一万极品灵石，每次加价不能少于五千极品灵石。”   特斯拉散发出惊人的灵压，让在场的人全都见猎心喜。        “三目童..
+								</div>
+		                </div>
+						<script>
+							
+							$(function () {
+								new commentMove(".topic_thumbnail_31",".topic_original_31","31").init();
+								
+							
+						    })
+						</script>
+					</th>    
+		        	<td></td>
+				</tr>
+			</tbody>          
+			<tbody>               
+				<tr>
+		    		<th> 
+				        <div class="avatarBox">
+				            <a class="avatarLink" href="http://bbs.diyhi.com/user/control/home?userName=test">
+									<img src="./static/巡云轻论坛演示站_files/2.jpg">
+				            </a>   
+				        </div>
+				        <div class="content">
+				            <a href="http://bbs.diyhi.com/thread?topicId=28" class="title">
+					          	<span>求拍摄技巧。。</span>
+							</a>
+							<div class="clear"></div>
+							<div class="info clearfix">
+				
+								<a href="javascript:;" class="clear">
+									<em class="replies">6</em>
+									<img class="images" src="./static/巡云轻论坛演示站_files/comment.png" style="float: right;*margin-top: 26px;" alt="">
+								</a>
+				
+								<a href="http://bbs.diyhi.com/" class="view" style="*margin-top: 20px;">
+									<img class="images" src="./static/巡云轻论坛演示站_files/pageview.png" alt="" style="float: left;">2580
+								</a>
+								<span class="tag">玩机技巧</span>
+								<em>  
+				                	<a href="http://bbs.diyhi.com/user/control/home?userName=test">
+					           			<span style="display:inline-block;margin-left: 7px;">
+					                    	测试会员
+					                    </span>
+				                    </a>
+										<span class="userRoleName">VIP</span>
+									
+				                </em>
+				                
+				                
+				                <em>发表时间：2018-05-05 18:47:41</em>
+				                	<em>最新回复：2018-10-30 13:24:01</em>
+				                
+							</div>
+						</div>
+						<div style="margin-left: 82px; position: relative;">
+			                	<div class="tm-m-photos topic_thumbnail_28">
+									<ul class="tm-m-photos-thumb">
+											<li data-src="file/topic/2018-05-05/image/db702a4eb09b4877a3f9bb2895852ea9b2.jpg"><div class="img" style="background-image: url(file/topic/2018-05-05/image/120x120/db702a4eb09b4877a3f9bb2895852ea9b2.jpg)"></div> <b class="tm-photos-arrow"></b> </li>
+											<li data-src="file/topic/2018-05-05/image/11d1d2c40bb9447e887db9610aa67ddab2.jpg"><div class="img" style="background-image: url(file/topic/2018-05-05/image/120x120/11d1d2c40bb9447e887db9610aa67ddab2.jpg)"></div> <b class="tm-photos-arrow"></b> </li>
+											<li data-src="file/topic/2018-05-05/image/71d770d5d7a84db38fc3f2cdf65cc7a9b2.jpg"><div class="img" style="background-image: url(file/topic/2018-05-05/image/120x120/71d770d5d7a84db38fc3f2cdf65cc7a9b2.jpg)"></div> <b class="tm-photos-arrow"></b> </li>
+									</ul>
+									<div class="tm-m-photo-viewer transition1 topic_original_28" style="margin-bottom:  -10px;"> 
+										<img src="./static/巡云轻论坛演示站_files/null.gif"> 
+										<a class="tm-m-photo-viewer-navleft navleft_28" style="cursor: default;"> <i class="tm-m-photo-viewer-navicon">&lt;</i> </a> 
+										<a class="tm-m-photo-viewer-navright navright_28" style="cursor: pointer;"> <i class="tm-m-photo-viewer-navicon">&gt;</i> </a> 
+									</div>
+								</div>
+		                </div>
+						<script>
+							
+							$(function () {
+								new commentMove(".topic_thumbnail_28",".topic_original_28","28").init();
+								
+							
+						    })
+						</script>
+					</th>    
+		        	<td></td>
+				</tr>
+			</tbody>          
+			<tbody>               
+				<tr>
+		    		<th> 
+				        <div class="avatarBox">
+				            <a class="avatarLink" href="http://bbs.diyhi.com/user/control/home?userName=test">
+									<img src="./static/巡云轻论坛演示站_files/2.jpg">
+				            </a>   
+				        </div>
+				        <div class="content">
+				            <a href="http://bbs.diyhi.com/thread?topicId=27" class="title">
+					          	<span>特斯拉的中国工厂即将公布</span>
+							</a>
+							<div class="clear"></div>
+							<div class="info clearfix">
+				
+								<a href="javascript:;" class="clear">
+									<em class="replies">3</em>
+									<img class="images" src="./static/巡云轻论坛演示站_files/comment.png" style="float: right;*margin-top: 26px;" alt="">
+								</a>
+				
+								<a href="http://bbs.diyhi.com/" class="view" style="*margin-top: 20px;">
+									<img class="images" src="./static/巡云轻论坛演示站_files/pageview.png" alt="" style="float: left;">1475
+								</a>
+								<span class="tag">综合</span>
+								<em>  
+				                	<a href="http://bbs.diyhi.com/user/control/home?userName=test">
+					           			<span style="display:inline-block;margin-left: 7px;">
+					                    	测试会员
+					                    </span>
+				                    </a>
+										<span class="userRoleName">VIP</span>
+									
+				                </em>
+				                
+				                
+				                <em>发表时间：2018-05-05 16:33:35</em>
+				                	<em>最新回复：2018-09-06 01:10:16</em>
+				                
+							</div>
+						</div>
+						<div style="margin-left: 82px; position: relative;">
+			                	<div class="tm-m-photos topic_thumbnail_27">
+									<ul class="tm-m-photos-thumb">
+											<li data-src="file/topic/2018-05-05/image/654a5b3d68bf4c3c80e8dddbaae12866b2.jpg"><div class="img" style="background-image: url(file/topic/2018-05-05/image/120x120/654a5b3d68bf4c3c80e8dddbaae12866b2.jpg)"></div> <b class="tm-photos-arrow"></b> </li>
+									</ul>
+									<div class="tm-m-photo-viewer transition1 topic_original_27" style="margin-bottom:  -10px;"> 
+										<img src="./static/巡云轻论坛演示站_files/null.gif"> 
+										<a class="tm-m-photo-viewer-navleft navleft_27" style="cursor: default;"> <i class="tm-m-photo-viewer-navicon">&lt;</i> </a> 
+										<a class="tm-m-photo-viewer-navright navright_27" style="cursor: pointer;"> <i class="tm-m-photo-viewer-navicon">&gt;</i> </a> 
+									</div>
+								</div>
+		                </div>
+						<script>
+							
+							$(function () {
+								new commentMove(".topic_thumbnail_27",".topic_original_27","27").init();
+								
+							
+						    })
+						</script>
+					</th>    
+		        	<td></td>
+				</tr>
+			</tbody>          
+			<tbody>               
+				<tr>
+		    		<th> 
+				        <div class="avatarBox">
+				            <a class="avatarLink" href="http://bbs.diyhi.com/user/control/home?userName=test2">
+									<img src="./static/巡云轻论坛演示站_files/3.jpg">
+				            </a>   
+				        </div>
+				        <div class="content">
+				            <a href="http://bbs.diyhi.com/thread?topicId=34" class="title">
+					          	<span>测试白金会员专区发贴 (需要'白金会员'角色的账户才能查看内容)</span>
+							</a>
+								<span class="topicRoleName">白金会员</span>
+								
+							<div class="clear"></div>
+							<div class="info clearfix">
+				
+								<a href="javascript:;" class="clear">
+									<em class="replies">0</em>
+									<img class="images" src="./static/巡云轻论坛演示站_files/comment.png" style="float: right;*margin-top: 26px;" alt="">
+								</a>
+				
+								<a href="http://bbs.diyhi.com/" class="view" style="*margin-top: 20px;">
+									<img class="images" src="./static/巡云轻论坛演示站_files/pageview.png" alt="" style="float: left;">168
+								</a>
+								<span class="tag">白金会员专区</span>
+								<em>  
+				                	<a href="http://bbs.diyhi.com/user/control/home?userName=test2">
+					           			<span style="display:inline-block;margin-left: 7px;">
+					                    	test2
+					                    </span>
+				                    </a>
+										<span class="userRoleName">白金会员</span>
+									
+				                </em>
+				                
+				                
+				                <em>发表时间：2019-08-17 22:16:06</em>
+				                
+							</div>
+						</div>
+						<div style="margin-left: 82px; position: relative;">
+								<div class="summary">
+									
+								</div>
+		                </div>
+						<script>
+							
+							$(function () {
+								new commentMove(".topic_thumbnail_34",".topic_original_34","34").init();
+								
+							
+						    })
+						</script>
+					</th>    
+		        	<td></td>
+				</tr>
+			</tbody>          
+			<tbody>               
+				<tr>
+		    		<th> 
+				        <div class="avatarBox">
+				            <a class="avatarLink" href="http://bbs.diyhi.com/user/control/home?userName=test">
+									<img src="./static/巡云轻论坛演示站_files/2.jpg">
+				            </a>   
+				        </div>
+				        <div class="content">
+				            <a href="http://bbs.diyhi.com/thread?topicId=33" class="title">
+					          	<span>测试VIP专区发贴 (需要'VIP'角色的账户才能查看内容)</span>
+							</a>
+								<span class="topicRoleName">白金会员</span>
+								
+								<span class="topicRoleName">VIP</span>
+								
+							<div class="clear"></div>
+							<div class="info clearfix">
+				
+								<a href="javascript:;" class="clear">
+									<em class="replies">0</em>
+									<img class="images" src="./static/巡云轻论坛演示站_files/comment.png" style="float: right;*margin-top: 26px;" alt="">
+								</a>
+				
+								<a href="http://bbs.diyhi.com/" class="view" style="*margin-top: 20px;">
+									<img class="images" src="./static/巡云轻论坛演示站_files/pageview.png" alt="" style="float: left;">132
+								</a>
+								<span class="tag">VIP专区</span>
+								<em>  
+				                	<a href="http://bbs.diyhi.com/user/control/home?userName=test">
+					           			<span style="display:inline-block;margin-left: 7px;">
+					                    	测试会员
+					                    </span>
+				                    </a>
+										<span class="userRoleName">VIP</span>
+									
+				                </em>
+				                
+				                
+				                <em>发表时间：2019-08-17 22:12:28</em>
+				                
+							</div>
+						</div>
+						<div style="margin-left: 82px; position: relative;">
+								<div class="summary">
+									
+								</div>
+		                </div>
+						<script>
+							
+							$(function () {
+								new commentMove(".topic_thumbnail_33",".topic_original_33","33").init();
+								
+							
+						    })
+						</script>
+					</th>    
+		        	<td></td>
+				</tr>
+			</tbody>          
+			<tbody>               
+				<tr>
+		    		<th> 
+				        <div class="avatarBox">
+				            <a class="avatarLink" href="http://bbs.diyhi.com/user/control/home?userName=test">
+									<img src="./static/巡云轻论坛演示站_files/2.jpg">
+				            </a>   
+				        </div>
+				        <div class="content">
+				            <a href="http://bbs.diyhi.com/thread?topicId=38" class="title">
+					          	<span>测试余额购买隐藏话题内容平台分成</span>
+							</a>
+								<span class="topicRoleName">白金会员</span>
+								
+								<span class="topicRoleName">VIP</span>
+								
+							<div class="clear"></div>
+							<div class="info clearfix">
+				
+								<a href="javascript:;" class="clear">
+									<em class="replies">0</em>
+									<img class="images" src="./static/巡云轻论坛演示站_files/comment.png" style="float: right;*margin-top: 26px;" alt="">
+								</a>
+				
+								<a href="http://bbs.diyhi.com/" class="view" style="*margin-top: 20px;">
+									<img class="images" src="./static/巡云轻论坛演示站_files/pageview.png" alt="" style="float: left;">47
+								</a>
+								<span class="tag">VIP专区</span>
+								<em>  
+				                	<a href="http://bbs.diyhi.com/user/control/home?userName=test">
+					           			<span style="display:inline-block;margin-left: 7px;">
+					                    	测试会员
+					                    </span>
+				                    </a>
+										<span class="userRoleName">VIP</span>
+									
+				                </em>
+				                
+				                
+				                <em>发表时间：2019-09-06 20:06:19</em>
+				                
+							</div>
+						</div>
+						<div style="margin-left: 82px; position: relative;">
+								<div class="summary">
+									
+								</div>
+		                </div>
+						<script>
+							
+							$(function () {
+								new commentMove(".topic_thumbnail_38",".topic_original_38","38").init();
+								
+							
+						    })
+						</script>
+					</th>    
+		        	<td></td>
+				</tr>
+			</tbody>          
+			<tbody>               
+				<tr>
+		    		<th> 
+				        <div class="avatarBox">
+				            <a class="avatarLink" href="http://bbs.diyhi.com/user/control/home?userName=test">
+									<img src="./static/巡云轻论坛演示站_files/2.jpg">
+				            </a>   
+				        </div>
+				        <div class="content">
+				            <a href="http://bbs.diyhi.com/thread?topicId=36" class="title">
+					          	<span>测试余额购买可见话题0.01</span>
+							</a>
+								<span class="topicRoleName">白金会员</span>
+								
+								<span class="topicRoleName">VIP</span>
+								
+							<div class="clear"></div>
+							<div class="info clearfix">
+				
+								<a href="javascript:;" class="clear">
+									<em class="replies">0</em>
+									<img class="images" src="./static/巡云轻论坛演示站_files/comment.png" style="float: right;*margin-top: 26px;" alt="">
+								</a>
+				
+								<a href="http://bbs.diyhi.com/" class="view" style="*margin-top: 20px;">
+									<img class="images" src="./static/巡云轻论坛演示站_files/pageview.png" alt="" style="float: left;">35
+								</a>
+								<span class="tag">VIP专区</span>
+								<em>  
+				                	<a href="http://bbs.diyhi.com/user/control/home?userName=test">
+					           			<span style="display:inline-block;margin-left: 7px;">
+					                    	测试会员
+					                    </span>
+				                    </a>
+										<span class="userRoleName">VIP</span>
+									
+				                </em>
+				                
+				                
+				                <em>发表时间：2019-09-06 19:56:57</em>
+				                
+							</div>
+						</div>
+						<div style="margin-left: 82px; position: relative;">
+								<div class="summary">
+									
+								</div>
+		                </div>
+						<script>
+							
+							$(function () {
+								new commentMove(".topic_thumbnail_36",".topic_original_36","36").init();
+								
+							
+						    })
+						</script>
+					</th>    
+		        	<td></td>
+				</tr>
+			</tbody>          
+</table>
+
+<div class="topicPage">
+
+<div class="pg">
+	<span class="count">共13条</span>  
+    
+    
+                <strong>1</strong>  
+         
+                <a href="javascript:topage(&#39;2&#39;)" title="第2页">2</a>  
+         
+    
+    <label>
+		<input onkeydown="if(event.keyCode==13) {topage(this.value);}" class="pg_input" title="输入页码，按回车跳转" value="1" size="2">
+		<span title="共2页"> / 2页</span>
+	</label>
+    	<a class="nxt" href="http://bbs.diyhi.com/?page=2">下一页</a>  
+</div>
+</div>
+
+</div>
+		{% if session.get("user_info") %}
+		<p>哈哈，你已经登录了</p>
+		<div id="mb_form">
+            <form action="/" method="POST">
+                <table>
+					<tr><td>帖子主题：</td><td><textarea id="topic" name="topic" placeholder="请输入帖子主题"></textarea></td></tr>
+                    <tr><td>帖子内容：</td><td><textarea id="content" name="content" placeholder="请输入帖子内容"></textarea></td></tr>
+                    <tr><td></td><td><button type="submit">提交</button></td></tr>
+                </table>
+            </form>
+        </div>
+		{% else %}
+		<div class="addCommentModule">
+			
+		
+			<div class="respond">
+				<p style="font-size:13px;padding:8px;text-align:center;background:#eee;overflow:hidden">请 
+				<a href="login">登录</a> 
+					后发表评论。没有帐号？
+					<a href="reg">注册</a> 一个。
+				</p>
+			</div>
+		</div>
+		{% endif %}
+
+
+
+	    
+
+			
+		</div>
+	</div>
+<div class="footer">
+    <div class="message">
+
+	</div>
+	<div class="copyright">Powered by <a target="_blank" href="http://www.diyhi.com/" class="link">diyhi</a>
+	<a target="_blank" href="http://bbs.diyhi.com/feedback">联系我们</a>
+	</div>	
+</div>
+<a href="http://www.diyhi.com/" id="pop_backButton" class="backButton">返回巡云官网</a>
+<style type="text/css">
+	/* 返回按钮 */
+	.backButton:before{ position: absolute; content: " "; border: transparent 14px solid; border-width: 13px 8px ; border-right-color: #26a3ff; top: 1px; left: -16px; height: 0; width: 0; }
+	.backButton{ position:absolute;bottom:10px; right:10px; width: 96px; height: 28px; background: #06b5ff; border-radius: 5px; text-align: center; line-height: 28px; color: #fff; font-size: 14px; border: 1px solid #26a3ff; }
+	.backButton:after{ position: absolute; content: " "; border: transparent 13px solid;  border-width:  12px 8px; border-right-color: #06b5ff; top: 2px; left: -15px; height: 0; width: 0; }
+	.backButton:hover{color: #fff; font-size: 14px; font-weight:bold;}  
+	.backButton:link {color: #fff; font-size: 14px;}
+</style>	
+<script type="text/javascript">
+	//浮动层固定右下角
+	window.onscroll = function(){
+		var high = 100;
+        document.getElementById('pop_backButton').style.top = document.documentElement.clientHeight + (document.documentElement.scrollTop || document.body.scrollTop) - high +'px';
+	}
+</script>
+
+
+
+
+
+
+</body></html>
