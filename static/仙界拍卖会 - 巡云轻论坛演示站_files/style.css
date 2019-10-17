@@ -1,0 +1,156 @@
+@font-face {
+  font-family: 'themify';
+  src:  url('fonts/themify.eot?9ijxac');
+  src:  url('fonts/themify.eot?9ijxac#iefix') format('embedded-opentype'),
+    url('fonts/themify.ttf?9ijxac') format('truetype'),
+    url('fonts/themify.woff?9ijxac') format('woff'),
+    url('fonts/themify.svg?9ijxac#themify') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="cms-"], [class*=" cms-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'themify' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cms-order:before {
+  content: "\e900";
+}
+.cms-user:before {
+  content: "\e602";
+}
+.cms-trash:before {
+  content: "\e605";
+}
+.cms-tag:before {
+  content: "\e608";
+}
+.cms-settings:before {
+  content: "\e60f";
+}
+.cms-search:before {
+  content: "\e610";
+}
+.cms-pencil:before {
+  content: "\e61c";
+}
+.cms-pencil-alt:before {
+  content: "\e61d";
+}
+.cms-lock:before {
+  content: "\e62b";
+}
+.cms-heart:before {
+  content: "\e634";
+}
+.cms-heart-broken:before {
+  content: "\e635";
+}
+.cms-view:before {
+  content: "\e63d";
+}
+.cms-reply2:before {
+  content: "\e644";
+}
+.cms-comment:before {
+  content: "\e645";
+}
+.cms-themify-close:before {
+  content: "\e646";
+}
+.cms-themify-check:before {
+  content: "\e64c";
+}
+.cms-announcement:before {
+  content: "\e64f";
+}
+.cms-themify-view-list:before {
+  content: "\e667";
+}
+.cms-thumb-up:before {
+  content: "\e670";
+}
+.cms-thumb-down:before {
+  content: "\e671";
+}
+.cms-server:before {
+  content: "\e67d";
+}
+.cms-pulse:before {
+  content: "\e680";
+}
+.cms-menu:before {
+  content: "\e68e";
+}
+.cms-menu-alt:before {
+  content: "\e68f";
+}
+.cms-home:before {
+  content: "\e69b";
+}
+.cms-clipboard:before {
+  content: "\e6b4";
+}
+.cms-bell:before {
+  content: "\e6b8";
+}
+.cms-themify-favicon:before {
+  content: "\e6d2";
+}
+.cms-email:before {
+  content: "\e75a";
+}
+.cms-follower:before {
+  content: "\e901";
+}
+.cms-topic:before {
+  content: "\e902";
+}
+.cms-reply:before {
+  content: "\e903";
+}
+.cms-commentCount:before {
+  content: "\e904";
+}
+.cms-login:before {
+  content: "\e905";
+}
+.cms-point:before {
+  content: "\e906";
+}
+.cms-log:before {
+  content: "\e907";
+}
+.cms-favorites:before {
+  content: "\e908";
+}
+.cms-realNameAuthentication:before {
+  content: "\e909";
+}
+.cms-quote:before {
+  content: "\e90a";
+}
+.cms-user2:before {
+  content: "\e90b";
+}
+.cms-follow:before {
+  content: "\e90c";
+}
+.cms-deposit:before {
+  content: "\e90d";
+}
+.cms-recharge:before {
+  content: "\e90e";
+}

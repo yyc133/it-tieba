@@ -3,16 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     	<!--<base href="http://bbs.diyhi.com/">--><base href=".">
 		
-		<title>登录 - 巡云轻论坛演示站</title>
+		<title>登录 - 论坛</title>
 		<meta name="keywords" content="巡云轻论坛演示站">
 		<meta name="description" content="巡云轻论坛演示站">
 		<link rel="shortcut icon" type="image/x-icon" href="http://bbs.diyhi.com/common/default/pc/images/favicon.ico" media="screen">
 		<link href="../static/登录 - 巡云轻论坛演示站_files/common.css" type="text/css" rel="stylesheet">
-		<script src="../static/登录 - 巡云轻论坛演示站_files/core.js.下载" language="javascript" type="text/javascript"></script>
-		<script src="../static/登录 - 巡云轻论坛演示站_files/sha256.js.下载" language="javascript" type="text/javascript"></script>
-		<script language="javascript" src="../static/登录 - 巡云轻论坛演示站_files/tool.js.下载" type="text/javascript"></script>
-		<script language="javascript" src="../static/登录 - 巡云轻论坛演示站_files/ajax.js.下载" type="text/javascript"></script>
-		<script language="javascript" src="../static/登录 - 巡云轻论坛演示站_files/json2.js.下载" type="text/javascript"></script>
+		<script src="../static/登录 - 巡云轻论坛演示站_files/core.js" language="javascript" type="text/javascript"></script>
+		<script src="../static/登录 - 巡云轻论坛演示站_files/sha256.js" language="javascript" type="text/javascript"></script>
+		<script language="javascript" src="../static/登录 - 巡云轻论坛演示站_files/tool.js" type="text/javascript"></script>
+		<script language="javascript" src="../static/登录 - 巡云轻论坛演示站_files/ajax.js" type="text/javascript"></script>
+		<script language="javascript" src="../static/登录 - 巡云轻论坛演示站_files/json2.js" type="text/javascript"></script>
     </head>
     <body>
 			{% if login_fail %}
@@ -27,13 +27,13 @@
 		</a>
 <div class="nav">
 	<ul class="clearfix">
-			<li><a href="http://bbs.diyhi.com/index">首页</a></li>
-			<li><a href="http://bbs.diyhi.com/membershipCardList">会员卡</a></li>
+			<li><a href="/">首页</a></li>
+			
 	</ul>
 </div>
 
 		<div class="head-search">
-			<form action="http://bbs.diyhi.com/search" method="get">
+			<form action="https://www.baidu.com/" method="get">
 				<input name="keyword" value="" autocomplete="off" placeholder="搜索">
 				<input type="submit" class="sub-button">
 			</form>
@@ -100,7 +100,7 @@
 						<span id="token_error" style="color: red;"></span>
 						<!-- 忘记密码及自动登录  -->
 						<p class="otherInfo">
-							<a href="http://bbs.diyhi.com/findPassWord/step1" tabindex="8">找回密码？</a>
+		
 							
 							<label>
 								<input id="rememberMe" name="rememberMe" type="checkbox" value="true">
@@ -128,11 +128,9 @@
     <div class="message">
 
 	</div>
-	<div class="copyright">Powered by <a target="_blank" href="http://www.diyhi.com/" class="link">diyhi</a>
-	<a target="_blank" href="http://bbs.diyhi.com/feedback">联系我们</a>
-	</div>	
+
 </div>
-<a href="http://www.diyhi.com/" id="pop_backButton" class="backButton">返回巡云官网</a>
+
 <style type="text/css">
 	/* 返回按钮 */
 	.backButton:before{ position: absolute; content: " "; border: transparent 14px solid; border-width: 13px 8px ; border-right-color: #26a3ff; top: 1px; left: -16px; height: 0; width: 0; }
@@ -439,7 +437,7 @@
 		}
 	
 		//禁止浏览器后退
-		window.history.forward(1);
+		// window.history.forward(1);
 		</script>
     
 </body></html>
